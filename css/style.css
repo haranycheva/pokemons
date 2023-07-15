@@ -1,0 +1,102 @@
+header {
+  background-color: #5c6b73;
+  padding: 15px 0 30px;
+}
+
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.pokemon-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-svg {
+  width: 24px;
+  height: 28px;
+}
+
+.search-input {
+  width: 450px;
+  height: 45px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+
+  font-size: 20px;
+}
+
+.submit-btn {
+  border-color: transparent;
+  background-color: #ffffff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 7px;
+}
+
+.error-text{
+  font-size: 40px;
+  text-align: center;
+  color: #253237;
+}
+
+.pockemon-list {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pokemon-link{
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  border: 3px solid #253237;
+  width: 445px;
+  border-radius: 9px;
+}
+
+.pokemon-text-content {
+  padding-left: 20px;
+}
+
+.pokemon-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.abilities-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pokemon-abilities {
+  padding-left: 13px;
+}
+
+.pokemon-ability {
+  position: relative;
+}
+
+.pokemon-ability::before {
+  content: "";
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #5c6b73;
+  position: absolute;
+  top: 50%;
+  left: -13px;
+  transform: translateY(-50%);
+}
