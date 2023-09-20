@@ -3,7 +3,11 @@ header {
   padding: 15px 0 30px;
 }
 
-.title{
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -42,7 +46,7 @@ header {
   padding: 7px;
 }
 
-.error-text{
+.error-text {
   font-size: 40px;
   text-align: center;
   color: #253237;
@@ -54,49 +58,64 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  text-align: center;
 }
 
-.pokemon-link{
+.pokemon-item {
   display: flex;
-  padding: 0 15px;
   align-items: center;
-  border: 3px solid #253237;
-  width: 445px;
-  border-radius: 9px;
+  justify-content: space-around;
+  width: 400px;
+  height: 200px;
+  border: 2px solid #5c6b73;
+  border-radius: 14px;
+  background-image: radial-gradient(
+      circle at 100% 0%,
+      rgb(108, 92, 231) 20%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    radial-gradient(
+      circle at 0% 0%,
+      rgb(108, 92, 231) 20%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgb(108, 92, 231) 20%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgb(108, 92, 231) 20%,
+      rgba(255, 255, 255, 0) 20%
+    );
 }
 
-.pokemon-text-content {
-  padding-left: 20px;
+.text-container 
+
+.name{
+  font-size: 24px;
+  font-weight: 700;
+  color: #30292F;
+
+  margin-bottom: 10px;
 }
 
-.pokemon-name {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 20px;
+.stats-list {
+  display: flex;
+  gap: 60px;
+
+  padding-bottom: 7px;
+  border-bottom: 2px solid #5c6b73;
+  margin-bottom: 10px;
 }
 
-.abilities-title {
-  font-size: 18px;
-  font-weight: 500;
+.stats-list2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  letter-spacing: 2px;
+  text-align: left;
 }
 
-.pokemon-abilities {
-  padding-left: 13px;
-}
-
-.pokemon-ability {
-  position: relative;
-}
-
-.pokemon-ability::before {
-  content: "";
-  border-radius: 50%;
-  width: 6px;
-  height: 6px;
-  background-color: #5c6b73;
-  position: absolute;
-  top: 50%;
-  left: -13px;
-  transform: translateY(-50%);
-}

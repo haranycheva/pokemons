@@ -5,6 +5,7 @@ import { addCards } from "./addCard.js";
 let previousPokemon = null;
 const ERROR1 = `<p class="error-text">Opppps....  We can't find pokemon with this name... :(</p>`;
 const ERROR2 = `<p class="error-text">Opppps....  Something went wrong :(</p>`;
+const ERROR3 = `<p class="error-text">Opppps....  We have some problems :(</p>`;
 
 export async function onSubmitForm(e) {
   e.preventDefault();
@@ -19,7 +20,7 @@ export async function onSubmitForm(e) {
     if(!saveData.ok){
         throw new Error(saveData.status)
     }
-    addCards( await saveData.json())
+    addCards(await saveData.json())
   } catch(err) {
     switch(err.message){
         case "404":
@@ -27,6 +28,9 @@ export async function onSubmitForm(e) {
             break
         case "Failed to fetch":
             refs.list.innerHTML = ERROR2
+            break
+        default:
+          refs.listinnerHTML = ERROR3
     }
   }
   e.target.reset();
