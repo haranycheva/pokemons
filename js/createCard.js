@@ -23,7 +23,7 @@ export function createCard(pokemonObj) {
     rgba(255, 255, 255, 0) 20%
   )">
   <img
-    src="${pokemonObj.sprites.other.dream_world.front_default}"
+    src="${pokemonObj.sprites.other.dream_world.front_default ? pokemonObj.sprites.other.dream_world.front_default : pokemonObj.sprites.front_default}"
     alt=""
     width="175px"
     height="150px"
