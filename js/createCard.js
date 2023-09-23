@@ -1,7 +1,6 @@
 import { colors } from "./backgroundColor.js";
 
 export function createCard(pokemonObj) {
-  const color = colors[pokemonObj.types[0].type.name];
   const name = pokemonObj.name.toUpperCase();
   const src = pokemonObj.sprites.other.dream_world.front_default ? pokemonObj.sprites.other.dream_world.front_default : pokemonObj.sprites.front_default;
   const hp = pokemonObj.stats[0].base_stat;
